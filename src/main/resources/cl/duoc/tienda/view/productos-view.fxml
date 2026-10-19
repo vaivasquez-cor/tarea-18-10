@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cl.duoc.tienda.controller.ProductoController">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="labelCodigo" layoutX="65.0" layoutY="73.0" text="Codigo" />
+            <Label fx:id="labelNombre" layoutX="65.0" layoutY="154.0" text="Nombre" />
+            <Label fx:id="labelPrecio" layoutX="65.0" layoutY="237.0" text="Precio" />
+            <Label fx:id="labelactivo" layoutX="355.0" layoutY="293.0" text="Activo" />
+            <Label fx:id="labelStock" layoutX="358.0" layoutY="73.0" text="Stock" />
+            <Label fx:id="labelCategoria" layoutX="346.0" layoutY="141.0" text="Categoria" />
+            <Label fx:id="labelOferta" layoutX="358.0" layoutY="226.0" text="Oferta" />
+            <TextField fx:id="textFieldCodigo" layoutX="126.0" layoutY="68.0" />
+            <TextField fx:id="textFieldNombre" layoutX="126.0" layoutY="149.0" />
+            <TextField fx:id="textFieldPrecio" layoutX="126.0" layoutY="230.0" />
+            <TextField fx:id="textFieldStock" layoutX="403.0" layoutY="68.0" />
+            <ComboBox fx:id="comboBoxCategoria" layoutX="402.0" layoutY="137.0" prefWidth="150.0" />
+            <CheckBox fx:id="checkBoxOferta" layoutX="414.0" layoutY="225.0" mnemonicParsing="false" />
+            <RadioButton fx:id="radioButtonSi" layoutX="415.0" layoutY="293.0" mnemonicParsing="false" selected="true" text="Si">
+               <toggleGroup>
+                  <ToggleGroup fx:id="tgActivo" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="radioButtonNo" layoutX="477.0" layoutY="293.0" mnemonicParsing="false" text="No" toggleGroup="$tgActivo" />
+            <Button onAction="#agregarProducto" fx:id="buttonAgregar" layoutX="430.0" layoutY="344.0" mnemonicParsing="false" text="Agregar" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
